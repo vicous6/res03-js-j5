@@ -14,9 +14,9 @@ let button = document.getElementById("button")
 
 let tableBody = document.getElementsByTagName("tbody")
 
-
+let listA = document.getElementsByTagName("a")
 console.log(button)
-
+let section4 = document.getElementById("section4")
 for(let i = 0 ; i < liste.length ; i ++){
     
     
@@ -159,7 +159,7 @@ button.addEventListener('click', function(){
              a2.setAttribute("href","https://res03.sites.3wa.io/assets/files/js/j5/demo/etape-3/index.html")
              
               let a3 = document.createElement('a')
-             a3.setAttribute("href","https://res03.sites.3wa.io/assets/files/js/j5/demo/etape-3/index.html")
+            //  a3.setAttribute("href","https://res03.sites.3wa.io/assets/files/js/j5/demo/etape-3/index.html")
       
       
             a.appendChild(span)
@@ -182,10 +182,43 @@ button.addEventListener('click', function(){
           
           tr.style.borderBottom = "1px solid black"
             tableBody[0].appendChild(tr)
+            
+            
+            
+// tab = tout les icone poubelle
+let tab = [];
+
+
+for (let i = 0; i < listA.length; i++) {
+
+    if (i % 4 === 3) {
+
+        tab.push(listA[i])
+
+
+    }
+}
+setInterval()
+
+for (let i = 0; i < tab.length; i++) {
+
+
+
+    tab[i].addEventListener('click', function() {
+
+        console.log(tab[i])
+        section4.classList.toggle("hide")
+        // validation.classList.toggle("hide")
+
+        
+    })
+}
+            
         }
     
     
     
     
 })
+
 

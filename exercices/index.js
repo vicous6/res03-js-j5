@@ -17,6 +17,8 @@ let tableBody = document.getElementsByTagName("tbody")
 let listA = document.getElementsByTagName("a")
 console.log(button)
 let section4 = document.getElementById("section4")
+
+let validation = document.getElementById("validation")
 for(let i = 0 ; i < liste.length ; i ++){
     
     
@@ -112,7 +114,7 @@ let users = [
 
 
 
-button.addEventListener('click', function(){
+window.addEventListener('DOMContentLoaded', function(){
    
     console.log("coucou")
     for (let i = 0 ; i < users.length;i++){
@@ -184,7 +186,12 @@ button.addEventListener('click', function(){
             tableBody[0].appendChild(tr)
             
             
+ 
             
+        }
+    
+    
+               
 // tab = tout les icone poubelle
 let tab = [];
 
@@ -198,26 +205,30 @@ for (let i = 0; i < listA.length; i++) {
 
     }
 }
-setInterval()
+let data = document.getElementById('data')
 
+let cancel = document.getElementById("cancel")
 for (let i = 0; i < tab.length; i++) {
 
-
+console.log(tab[i])
 
     tab[i].addEventListener('click', function() {
 
-        console.log(tab[i])
-        section4.classList.toggle("hide")
-        // validation.classList.toggle("hide")
-
+       
+        section4.classList.toggle("hide");
+        validation.classList.toggle("hide");
         
+          data.textContent = users[i].name
     })
 }
-            
-        }
+
+
+cancel.addEventListener('click', function(){
     
+     section4.classList.toggle("hide");
+        validation.classList.toggle("hide");
     
-    
+})
     
 })
 

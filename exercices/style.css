@@ -86,7 +86,7 @@ img{
     
 }
 .hide{
-    display:none;
+    display:none !important;
 }
 li{
     margin-bottom:0.5rem;
@@ -170,4 +170,29 @@ tr{
 #section4 > h2{
     
    margin-bottom:4vh;
+}
+
+#validation{
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#validation > article{
+        box-shadow: 2px 2px 3px rgb(0 0 0 / 20%);
+            border: 2px solid #b50604;
+    width:50%;
+    height:30%;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#validation > article > h3{
+    
+    align-self:center;
+    justify-self:center;
+}
+#validation > article > p{
+    
+   margin:0 auto;
 }
